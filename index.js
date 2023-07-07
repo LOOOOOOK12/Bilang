@@ -25,16 +25,28 @@ document.getElementById("increase").onclick = function(){
 }
 
 function checkCount() {
-    if (count === 69 || count === -69) {
+    if (count.toString().includes('69')) {
         document.getElementById("countLabel").innerHTML = count + ' Nice!';
+        body.style.background='#ff4160';
+        body.style.transition = '0.5s';
+        container.style.background = '#ff6c85';
+        body.style.transition = '0.5s';
+        container.style.transition = '0.5s';
     }
+    else{
+        body.style.background = 'pink';
+        body.style.transition = '0.5s';
+        container.style.background = '#ff87ab';
+    }
+
 }
 
+//DARKMODE
 toggle.addEventListener('click',function(){
     if(this.classList.toggle('darkmode')){
       body.style.background = 'pink';
       body.style.transition = '0.5s';
-      container.style.background = 'rgb(253, 125, 146)';
+      container.style.background = '#ff87ab';
       toggle.style.border = '3px solid #466DFF';
       image.src = moon;
     }
